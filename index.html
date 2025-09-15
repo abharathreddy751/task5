@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopEase — Responsive E‑commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">ShopEase</a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+        ☰
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><button id="cart-open" class="cart-btn" aria-label="Open cart">Cart <span id="cart-count">0</span></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Welcome to ShopEase</h1>
+        <p>Fast, clean, and fully responsive demo shop.</p>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <h2>Featured Products</h2>
+      <div id="product-list" class="product-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="document">
+      <header class="modal-header">
+        <h3>Your Cart</h3>
+        <button id="cart-close" class="modal-close" aria-label="Close cart">✕</button>
+      </header>
+      <div class="modal-body">
+        <ul id="cart-items" class="cart-items"></ul>
+      </div>
+      <footer class="modal-footer">
+        <div class="total">Total: $<span id="cart-total">0.00</span></div>
+        <div class="modal-actions">
+          <button id="checkout-btn" class="btn primary">Checkout</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 ShopEase — Built for responsiveness demo.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
